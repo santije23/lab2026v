@@ -1,6 +1,11 @@
 # lab2026v
 [![CI/CD Pipeline](https://github.com/santije23/lab2026v/actions/workflows/build.yml/badge.svg)](https://github.com/santije23/lab2026v/actions/workflows/build.yml)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=santije23_lab2026v&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=santije23_lab2026v)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=santije23_lab2026v&metric=bugs)](https://sonarcloud.io/summary/new_code?id=santije23_lab2026v)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=santije23_lab2026v&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=santije23_lab2026v)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=santije23_lab2026v&metric=coverage)](https://sonarcloud.io/summary/new_code?id=santije23_lab2026v)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=santije23_lab2026v&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=santije23_lab2026v)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=santije23_lab2026v&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=santije23_lab2026v)
 
 Implementation of a Simple App with the next operations:
 
