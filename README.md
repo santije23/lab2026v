@@ -1,3 +1,4 @@
 # lab2026v
 
-- actualizacion 1 readme
+- actualización 1 readme
+- actualización 2 readme
