@@ -1,10 +1,12 @@
 package com.udea.lav2026v;
 
 import org.junit.jupiter.api.Test;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class Lav2026vApplicationTests {
@@ -24,13 +26,13 @@ class Lav2026vApplicationTests {
 
 	@Test
 	void nationLength() {
-		Integer nationsLength = dataController.getRandomnNations().size();
+		Integer nationsLength = dataController.getRandomNations().size();
 		assertEquals(10, nationsLength);
 	}
 
 	@Test
 	void currenciesLength() {
-		Integer currenciesLength = dataController.getRandomnCurrencies().size();
+		Integer currenciesLength = dataController.getRandomCurrencies().size();
 		assertEquals(20, currenciesLength);
 	}
 
@@ -38,6 +40,29 @@ class Lav2026vApplicationTests {
 	void aviationsLength() {
 		Integer aviatiosLength = dataController.getRandomnAviation().size();
 		assertEquals(20, aviatiosLength);
+	}
+
+	@Test
+	public void testRandomCurrenciesCodeFormat(){
+		DataController controller = new DataController();
+		JsonNode response = controller.getRandomCurrencies();
+		for(int i=0; i< response.size(); i++){
+			JsonNode currency = response.get(i);
+			String code = currency.get("code").asText();
+			assertTrue(code.matches("[A-Z]{3}"));
+		}
+	}
+
+	@Test
+	public void testRandomNationsPerformance() {
+		DataController controller = new DataController();
+		long startTime = System.currentTimeMillis();
+
+		controller.getRandomNations();
+		long endTime = System.currentTimeMillis();
+		long executionTime = endTime - startTime;
+		System.out.println(executionTime);
+		assertTrue(executionTime < 2000);
 	}
 
 }
