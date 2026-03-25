@@ -1,4 +1,4 @@
-FROM openjdk:11-ea-19-jre-slim
+FROM openjdk:17.0.1-jdk-slim
 
 EXPOSE 8080
 
